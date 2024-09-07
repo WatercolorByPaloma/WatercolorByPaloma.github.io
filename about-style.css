@@ -1,0 +1,22 @@
+body {
+    background-color: #A48D7E;
+}
+
+.content-section {
+    background-color: #7D675C;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.content-section h2 {
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+.img-section img {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+}

@@ -1,0 +1,158 @@
+.container-hero-section{
+
+    background: #f1efe1;
+}
+
+.hero-section {
+    background-image: url(img/fundocabecalho.png);
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-position: center;
+    display: flex;
+    text-align: center;
+    min-height: 18rem;
+}
+
+  /* .row-portfolio{
+      min-height: 19rem;
+  } */
+
+.hero-section>.container {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 400;
+    width: 75%;
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+}
+
+.text-scroller {
+    white-space: nowrap;
+    animation: scrollText 15s linear infinite;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-150%);
+    }
+}
+
+.all-animals {
+    position: relative;
+    width: 100%;
+    background-image: url('img/barra_detalhes.jpg');
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    height: 22rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.blockquote{
+    width: 50%;
+}
+
+.carousel-control-prev-icon::after {
+    content: '\f104';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: white;
+}
+
+.carousel-control-next-icon::after {
+    content: '\f105';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: white;
+}
+
+.text-scroller {
+    white-space: nowrap;
+    animation: scrollText 15s linear infinite;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.wave-text-container {
+    width: 200%;
+    animation: scrollText 15s linear infinite;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+svg {
+    display: block;
+    overflow: visible;
+}
+
+.wave-text {
+    fill: black;
+}
+
+.image-box {
+    padding: 0 2px;
+    border: 1px solid white;
+}
+
+.grayscale-img {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+.grayscale-img:hover {
+    filter: grayscale(0%);
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 150px;
+    }
+}
+
+#client-says{
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+}
+
+#main-footer{
+    /* margin-top: 1rem; */
+    height: 9rem;
+    background-color: #9ba78b;
+}
+
