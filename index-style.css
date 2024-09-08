@@ -1,24 +1,26 @@
-.container-hero-section{
+body {
+    background-color: #fafafa;
+}
+
+.container-hero-section {
 
     background: #f1efe1;
 }
 
 .hero-section {
     background-image: url(img/fundocabecalho.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: repeat-x;
     background-position: center;
     display: flex;
     text-align: center;
-    min-height: 18rem;
+    min-height: 30rem;
+    margin-bottom: 10%;
 }
 
-  /* .row-portfolio{
-      min-height: 19rem;
-  } */
 
 .hero-section>.container {
-  display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -51,11 +53,16 @@
     }
 }
 
+.my-services {
+    background: #f1efe1;
+
+}
+
 .all-animals {
     position: relative;
     width: 100%;
     background-image: url('img/barra_detalhes.jpg');
-    background-size: contain;
+    background-size: cover;
     background-repeat: repeat-x;
     background-position: center;
     display: flex;
@@ -63,13 +70,53 @@
     justify-content: center;
     color: white;
     text-align: center;
-    height: 22rem;
-    margin-top: 5rem;
+    height: 23rem;
+    margin-top: 10rem;
     margin-bottom: 5rem;
 }
 
-.blockquote{
+.blockquote {
     width: 50%;
+}
+
+.wave-container, .wave-container-top {
+    height: 11vh;
+    background-color: #f1efe1;
+    position: relative;
+}
+
+.wave-container::before {
+    content: "";
+    width: 100%;
+    height: 160px;
+    position: absolute;
+    bottom: -0.3%;
+    left: 0;
+    background-size: auto;
+    background-repeat: repeat no-repeat;
+    background-position: 0vw bottom;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  80' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 59L50 55C100 51 200 44 300 30C400 15 500 -6 600 1C700 8 800 44 900 59C1000 73 1100 66 1150 62L1200 59V80H1150C1100 80 1000 80 900 80C800 80 700 80 600 80C500 80 400 80 300 80C200 80 100 80 50 80H0V59Z' fill='%23fafafa'/></svg>");
+}
+
+.wave-container-top::after {
+    content: "";
+    width: 100%;
+    height: 160px;
+    position: absolute;
+    top: -0.3%; /* Altere de bottom para top */
+    left: 0;
+    background-size: auto;
+    background-repeat: repeat no-repeat;
+    background-position: 0vw top;
+        background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  80' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 59L50 55C100 51 200 44 300 30C400 15 500 -6 600 1C700 8 800 44 900 59C1000 73 1100 66 1150 62L1200 59V80H1150C1100 80 1000 80 900 80C800 80 700 80 600 80C500 80 400 80 300 80C200 80 100 80 50 80H0V59Z' fill='%23fafafa'/></svg>");
+    transform: rotate(180deg); /* Rotaciona o SVG */
+}
+
+
+@media(max-width:850px) {
+    .wave-container::before {
+        height: 80px
+    }
 }
 
 .carousel-control-prev-icon::after {
@@ -139,20 +186,79 @@ svg {
     filter: grayscale(0%);
 }
 
-@media (max-width: 768px) {
-    .hero-section {
-        height: 150px;
-    }
-}
 
-#client-says{
+
+#client-says {
     margin-top: 15rem;
     margin-bottom: 15rem;
 }
 
-#main-footer{
-    /* margin-top: 1rem; */
+#main-footer {
+    margin-top: 1rem;
     height: 9rem;
     background-color: #9ba78b;
 }
 
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+    content: none !important;
+}
+
+.bg-icon-carrosel {
+    background: #9ba78b;
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+#wave {
+    min-height: 18vh;
+    height: 10vh;
+    height: round(18vh, 1px);
+    background: #f1efe1;
+    ;
+    --mask: radial-gradient(13.42rem at 50% calc(100% - 18rem), #000 99%, #0000 101%) calc(50% - 12rem) 0 / 24rem 100%, radial-gradient(13.42rem at 50% calc(100% + 12rem), #0000 99%, #000 101%) 50% calc(100% - 6rem) / 24rem 100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+
+.btn-enquire-portfolio {
+    --bs-btn-bg: #9ba78b;
+    --bs-btn-border-color: #9ba78b;
+    height: 100px;
+    padding: 7% 18%;
+    font-weight: 400;
+}
+
+
+@media only screen and (max-width: 480px) {
+    .container-hero-section {
+        background: red;
+    }
+}
+
+/* Tablets */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    .container-hero-section {
+        background: blue;
+    }
+
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Desktops pequenos */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    .container-hero-section {
+        background: green;
+    }
+}
+
+/* Desktops grandes */
+@media only screen and (min-width: 1201px) {}
+
+/* Orientação retrato */
+@media only screen and (orientation: portrait) {}
