@@ -1,0 +1,16 @@
+{
+  "en": {
+    "enquire_by_email": "Enquire by email",
+    "animal_masterpiece" : "YOUR ANIMAL IN A WATERCOLOR MASTERPIECE",
+    "my_services" : "MY SERVIVES",
+    "check_portfolio_enquire" : "Check my portfolio and enquire now",
+    "what_client_say" : "WHAT MY COMMISSION CLIENTS SAY"
+  },
+  "pt": {
+    "enquire_by_email": "Encomende por email",
+    "animal_masterpiece" : "O SEU ANIMAL EM UMA OBRA DE ARTE",
+    "my_services" : "MEUS SERVIÇOS",
+    "check_portfolio_enquire" : "Veja o meu porfolio e encomende agora",
+    "what_client_say" : "O QUE OS CLIENTES QUE JÁ ENCOMENDARAM DIZEM"
+  }
+}
