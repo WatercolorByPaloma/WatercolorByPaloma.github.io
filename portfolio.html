@@ -1,88 +1,145 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WATERCOLOR BY PALOMA</title>
-    <!-- Bootstrap CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="index-style.css"/>
-
-        <!-- <style>
-       .background-container {
-            width: 100vw; /* Largura do contêiner é 100% da largura da viewport */
-            height: 100vh; /* Altura do contêiner é 100% da altura da viewport */
-            position: relative; /* Necessário para o posicionamento absoluto do texto */
-            overflow: hidden; /* Garante que nada ultrapasse os limites do contêiner */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .background-container img {
-            position: absolute; /* Para garantir que a imagem ocupe todo o contêiner */
-            top: 0;
-            left: 0;
-            width: auto; /* Largura da imagem é 100% do contêiner */
-            height: 100%; /* Altura da imagem é 100% do contêiner */
-            object-fit: cover; /* A imagem cobre o contêiner mantendo a proporção */
-        }
-
-        .text-overlay {
-            position: absolute; /* Posicionar sobre a imagem */
-            color: white; /* Cor do texto */
-            font-size: 2rem; /* Tamanho da fonte */
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Sombra do texto */
-            text-align: center; /* Centralizar o texto */
-            width: 100%; /* Garantir que o texto esteja centralizado no contêiner */
-            top: 50%; /* Posicionar no meio verticalmente */
-            left: 50%; /* Posicionar no meio horizontalmente */
-            transform: translate(-50%, -50%); /* Ajustar para o centro exato */
-        }
-    </style> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WATERCOLOR BY PALOMA</title>
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="index-style.css" />
 </head>
-<body>
-    <div class="container-fluid">       
-        <div class="row">
-            <div class="col p-1">
-                        <img src="img/P&B1.jpg" class="img-fluid grayscale-img" alt="Image 1">
-            </div>
-              <div class="col p-1">
-                        <img src="img/P&B2.jpg" class="img-fluid grayscale-img" alt="Image 1">
-            </div>
-              <div class="col p-1">
-                        <img src="img/P&B3.jpg" class="img-fluid grayscale-img" alt="Image 1">
-            </div>
-              <div class="col p-1">
-                        <img src="img/P&B4.jpg" class="img-fluid grayscale-img" alt="Image 1">
-            </div>
-              <div class="col p-1">
-                        <img src="img/P&B5.jpg" class="img-fluid grayscale-img" alt="Image 1">
-            </div>
-            </div>
 
-            <div class="row">
-              <div class="col p-1">
-                        <img src="img/P&B6.jpg" class="img-fluid grayscale-img" alt="Image 1">
-            </div>
-              <div class="col p-1">
-                        <img src="img/P&B7.jpg" class="img-fluid grayscale-img" alt="Image 1">
-            </div>
-              <div class="col p-1">
-                        <img src="img/P&B8.jpg" class="img-fluid grayscale-img" alt="Image 1">
-            </div>
-              <div class="col p-1">
-                        <img src="img/P&B9.jpg" class="img-fluid grayscale-img" alt="Image 1">
-            </div>
-              <div class="col p-1">
-                        <img src="img/P&B10.jpg" class="img-fluid grayscale-img" alt="Image 1">
-            </div>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container" style="height: 9rem;">
+      <a class="navbar-brand" href="#">WATERCOLOR BY PALOMA</a>
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse just" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Commission Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Learn to Draw</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div> -->
+      <div style="display: flex; gap: 10px; align-items: center;">
+        <a href="https://www.instagram.com/watercolor_animal/" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="" class="bi bi-instagram"
+            viewBox="0 0 16 16" style="height: 30px; width: 30px;">
+            <path
+              d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334">
+            </path>
+          </svg>
+        </a>
+        <div class="btn-group" role="group" aria-label="Language switch">
+          <button type="button" class="btn btn-primary btn-sm" id="btn-pt">PT</button>
+          <button type="button" class="btn btn-secondary btn-sm" id="btn-en">EN</button>
         </div>
+        <a href="mailto:watercoloranimal.bypl@gmail.com" class="btn btn-outline-secondary"
+          data-language="enquire_by_email">
+          Enquire by email</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
+                five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     </div>
 
-    <!-- Adiciona o script do Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <div class="row">
+      <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+          class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
+          class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape" />
+      </div>
+
+      <div class="col-lg-4 mb-4 mb-lg-0">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
+          class="w-100 shadow-1-strong rounded mb-4" alt="Mountains in the Clouds" />
+
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+          class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+      </div>
+
+      <div class="col-lg-4 mb-4 mb-lg-0">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
+          class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" />
+
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
+          class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+          class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
+          class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape" />
+      </div>
+
+      <div class="col-lg-4 mb-4 mb-lg-0">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
+          class="w-100 shadow-1-strong rounded mb-4" alt="Mountains in the Clouds" />
+
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+          class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+      </div>
+
+      <div class="col-lg-4 mb-4 mb-lg-0">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
+          class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" />
+
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
+          class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
+      </div>
+    </div>
+  </div>
+  <!-- Gallery -->
+  <footer id="main-footer" style="
+    height: 50px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;">
+    @watercolorbypaloma
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+
+  <script src="/script.js"></script>
 
 </body>
+
 </html>
