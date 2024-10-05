@@ -249,8 +249,9 @@ svg {
 }
 
 .btn-enquire-portfolio:hover{
-    background-color: #f1efe1;
+    background-color: #acb4a2;
     color: black;
+    font-weight: 600;
 }
 
 
@@ -281,3 +282,21 @@ svg {
 
 /* Orientação retrato */
 @media only screen and (orientation: portrait) {}
+
+
+
+/* PORTFOLIO */
+.img-mosaic {
+    height: auto; /* Garante que as imagens mantenham a proporção */
+    object-fit: cover; /* Faz com que a imagem se ajuste ao espaço da coluna */
+    transition: transform 0.3s; /* Adiciona uma transição suave para o efeito de hover */
+}
+
+.img-mosaic:hover {
+    transform: scale(1.05); /* Aumenta a imagem ligeiramente ao passar o mouse */
+}
+
+/* Adicionando um espaço aleatório nas margens */
+.col-lg-4, .col-md-6 {
+    padding: 0.5rem; /* Adiciona um espaçamento entre as colunas */
+}

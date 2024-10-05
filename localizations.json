@@ -2,15 +2,30 @@
   "en": {
     "enquire_by_email": "Enquire by email",
     "animal_masterpiece" : "YOUR ANIMAL IN A WATERCOLOR MASTERPIECE",
-    "my_services" : "MY SERVIVES",
+    "my_services" : "MY SERVICES",
     "check_portfolio_enquire" : "Check my portfolio and enquire now",
-    "what_client_say" : "WHAT MY COMMISSION CLIENTS SAY"
+    "what_client_say" : "WHAT MY COMMISSION CLIENTS SAY",
+    "personalized_portraits_your_pet" : "PERSONALIZED PORTRAITS OF YOUR PET",
+    "personalized_portraits_your_pet_description" : "Immortalize the essence and affection of your pet with an exclusive hand-drawn portrait. Each work is created with attention to the smallest detail, capturing your companion's unique personality in watercolor. Using delicate techniques and 100% professional materials, I transform each brushstroke into a faithful and lively representation, bringing out your pet's most striking features. Whether it's a gift for yourself or for someone special, a personalized portrait is a unique way to celebrate the love and bond you share with your pet.",
+    "personalized_portraits_wildlife" : "PERSONALIZED WILDLIFE PORTRAITS",
+    "personalized_portraits_wildlife_description" : "Bring the beauty of nature into your home with exclusive portraits of wild animals. Each painting is done by hand, capturing the strength, elegance and uniqueness of these beings in watercolor. As a biologist, I bring special attention and in-depth knowledge of the characteristics of each species, which allows me to represent each animal more accurately. With an artistic and scientific eye, my pieces go beyond decoration, bringing a connection with the natural world. Ideal for nature lovers and those who want to transform their environments with inspiring and engaging art. Transform your wall by choosing your favorite animal and bringing wildlife represented in art into your home.",
+    "news_comming_soon" : "🎨✨ News comming soon! ✨🎨",
+    "news_comming_soon_description" : "We are excited to announce that you will soon be able to purchase an exclusive collection of products featuring the beautiful watercolors of our talented artist! Each piece has been carefully created and printed with her vibrant works, bringing a touch of art to your everyday life. From decorative items to unique accessories, we have a variety of products that will delight art lovers. Stay tuned! We'll be revealing more details and launch dates soon. Don't miss the chance to take a little piece of this magic home! 🌟 Follow us on social media and be among the first to discover this news! 🌟",
+    "about_me" :"About me" 
   },
   "pt": {
     "enquire_by_email": "Encomende por email",
-    "animal_masterpiece" : "O SEU ANIMAL EM UMA OBRA DE ARTE",
+    "animal_masterpiece" : "O SEU ANIMAL NUMA OBRA DE ARTE EM AQUARELA",
     "my_services" : "MEUS SERVIÇOS",
     "check_portfolio_enquire" : "Veja o meu porfolio e encomende agora",
-    "what_client_say" : "O QUE OS CLIENTES QUE JÁ ENCOMENDARAM DIZEM"
+    "what_client_say" : "O QUE OS CLIENTES QUE JÁ ENCOMENDARAM DIZEM",
+    "personalized_portraits_your_pet" : "RETRATOS PERSONALIZADOS DO SEU PET",
+    "personalized_portraits_your_pet_description" : "Imortalize a essência e o carinho do seu pet com um retrato exclusivo feito à mão. Cada obra é criada com atenção aos mínimos detalhes e capturando a personalidade única do seu companheiro em aquarela. Usando técnicas delicadas, material 100% profissional, transformo cada pincelada numa representação fiel e cheia de vida, trazendo à tona as características mais marcantes do seu animal de estimação. Seja um presente para você ou para alguém especial, um retrato personalizado é uma forma única de celebrar o amor e o vínculo que você compartilha com o seu pet.",
+    "personalized_portraits_wildlife" : "RETRATOS PERSONALIZADOS DA VIDA SELVAGEM",
+    "personalized_portraits_wildlife_description" :  "Traga a beleza da natureza para dentro da sua casa com retratos exclusivos de animais selvagens. Cada pintura é feita à mão, capturando a força, a elegância e a singularidade desses seres em aquarela. Como bióloga, trago uma atenção especial e um conhecimento profundo sobre as características de cada espécie, o que me permite representar com maior precisão cada animal. Com um olhar artístico e científico, as minhas peças vão além da decoração, trazendo uma conexão com o mundo natural. Ideal para amantes da natureza e para quem deseja transformar os seus ambientes com arte inspiradora e envolvente. Transforme a sua parede escolhendo o seu animal favorito e levando para a sua casa a vida selvagem representada em arte.",
+    "news_comming_soon" : "🎨✨ Novidades em Breve! ✨🎨",
+    "news_comming_soon_description" : "Estamos animados em anunciar que em breve você poderá adquirir uma coleção exclusiva de produtos com as belíssimas aquarelas da nossa talentosa artista! Cada peça foi cuidadosamente criada e estampada com as suas obras vibrantes, trazendo um toque de arte para o seu dia a dia. De itens de decoração a acessórios únicos, temos uma variedade de produtos que vão encantar os amantes da arte. Fique ligado! Em breve, revelaremos mais detalhes e datas de lançamento. Não perca a chance de levar um pedacinho dessa magia para casa! 🌟 Acompanhe nossas redes sociais e esteja entre os primeiros a descobrir essas novidades! 🌟",
+    "about_me" : "Sobre mim"
+  
   }
 }
