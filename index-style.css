@@ -76,7 +76,7 @@ body {
     text-align: center;
     height: 23rem;
     margin-top: 10rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 .blockquote {
@@ -232,13 +232,31 @@ svg {
 }
 
 .btn-enquire-portfolio {
-    --bs-btn-bg: #9ba78b;
-    --bs-btn-border-color: #9ba78b;
-    height: 100px;
-    padding: 7% 18%;
+    background-color: #9ba78b;
+    text-decoration: none;
+    color: white;
+    padding: 0px;
+    border-radius: 5px;
+    --bs-btn-border-color: #acb4a2;
+    height: 3em;
     font-weight: 400;
+    font-size: 2em;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+
 }
 
+.btn-enquire-portfolio:hover{
+    background-color: #f1efe1;
+    color: black;
+}
+
+
+.card-client-pictures{
+    margin: 0 auto;
+}
 
 @media only screen and (max-width: 480px) {
 
