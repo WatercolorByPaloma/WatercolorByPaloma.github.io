@@ -12,7 +12,14 @@
     "news_comming_soon" : "🎨✨ News comming soon! ✨🎨",
     "news_comming_soon_description" : "We are excited to announce that you will soon be able to purchase an exclusive collection of products featuring the beautiful watercolors of our talented artist! Each piece has been carefully created and printed with her vibrant works, bringing a touch of art to your everyday life. From decorative items to unique accessories, we have a variety of products that will delight art lovers. Stay tuned! We'll be revealing more details and launch dates soon. Don't miss the chance to take a little piece of this magic home! 🌟 Follow us on social media and be among the first to discover this news! 🌟",
     "about_me" :"About me",
-    "commissions" : "Commissions"
+    "commissions" : "Commissions",
+    "all-portfolio" : "Portfolio",
+    "photo-vs-image" : "Photo vs Image",
+    "home-page" : "Home",
+    "step-1": "Step 1",
+    "step-2" : "Step 2", 
+    "step-3" : "Step 3",
+    "step-4" : "Step 4"
   },
   "pt": {
     "enquire_by_email": "Encomende por email",
@@ -27,6 +34,13 @@
     "news_comming_soon" : "🎨✨ Novidades em Breve! ✨🎨",
     "news_comming_soon_description" : "Estamos animados em anunciar que em breve você poderá adquirir uma coleção exclusiva de produtos com as belíssimas aquarelas da nossa talentosa artista! Cada peça foi cuidadosamente criada e estampada com as suas obras vibrantes, trazendo um toque de arte para o seu dia a dia. De itens de decoração a acessórios únicos, temos uma variedade de produtos que vão encantar os amantes da arte. Fique ligado! Em breve, revelaremos mais detalhes e datas de lançamento. Não perca a chance de levar um pedacinho dessa magia para casa! 🌟 Acompanhe nossas redes sociais e esteja entre os primeiros a descobrir essas novidades! 🌟",
     "about_me" : "Sobre mim",
-    "commissions" : "Encomendas"  
+    "commissions" : "Encomendas" ,
+    "all-portfolio" : "Portfolio",
+    "photo-vs-image" : "Foto vs Imagem",
+    "home-page" : "Início",
+    "step-1" : "Passo 1",
+    "step-2" : "Passo 2", 
+    "step-3" : "Passo 3",
+    "step-4" : "Passo 4"
   }
 }
