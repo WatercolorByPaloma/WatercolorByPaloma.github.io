@@ -343,3 +343,12 @@ svg {
       top: -40px;
     }
   }
+
+  #carouselExampleControls .carousel-inner .comment {
+    padding: 0 20% !important;
+    font-size: clamp(1rem, 2vw, 1.5rem) !important;
+    line-height: 1.2;
+    white-space: normal; /* permite quebra de linha */
+    overflow-wrap: break-word; /* quebra o texto em palavras */
+    text-align: center; /* alinha o texto no centro */
+  }
