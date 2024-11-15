@@ -58,3 +58,17 @@ btnPt.addEventListener('click', () => toggleLanguage('pt'));
 btnEn.addEventListener('click', () => toggleLanguage('en'));
 
 fetchLocalization();
+
+
+document.querySelector('#carouselExampleDark').addEventListener('slide.bs.carousel', function (event) {
+   
+    const allImages = document.querySelectorAll('.img-paloma, .img-douglas, .img-franklyn, .img-gaia');
+    allImages.forEach(image => image.style.opacity = 0.3);
+
+    
+    const activeSlide = event.relatedTarget;
+    const activeSlideIndex = Array.from(activeSlide.parentNode.children).indexOf(activeSlide);
+    const images = document.querySelectorAll('.img-paloma, .img-douglas, .img-franklyn, .img-gaia');
+    
+    images[activeSlideIndex].style.opacity = 1;
+});

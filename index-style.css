@@ -352,3 +352,28 @@ svg {
     overflow-wrap: break-word; /* quebra o texto em palavras */
     text-align: center; /* alinha o texto no centro */
   }
+
+.img-paloma, .img-douglas, .img-franklyn, .img-gaia {
+    opacity: 0.3;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-item.active .img-paloma {
+    opacity: 1;
+}
+
+.carousel-item.active .img-douglas {
+    opacity: 1;
+}
+
+.carousel-item.active .img-franklyn {
+    opacity: 1;
+}
+
+.carousel-item.active .img-gaia {
+    opacity: 1;
+}
+
+.img-paloma {
+    opacity: 1;
+}

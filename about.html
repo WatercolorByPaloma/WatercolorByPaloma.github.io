@@ -48,12 +48,18 @@
 
     <div class="container">
         <div class="row mb-3 mt-1">
-            <div class="col col-md-6  mb-3 col-12">Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
-                five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
-                recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            <div class="col col-md-6  mb-3 col-12" style="
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;">
+                <div class="row">
+                    <h2 data-language="my_art"></h2>
+                    <p data-language="my_art_description"></p>
+                </div>
+                <div class="row mt-5">
+                    <h2 data-language="continuous_learning_improvement"></h2>
+                    <p data-language="continuous_learning_improvement_description"></p>
+                </div>
             </div>
             <div class="col col-md-6 col-12">
                 <img src="img/paloma_3.JPG" class="img-fluid rounded" alt="Image 1">
@@ -63,34 +69,87 @@
 
     <section class="py-5">
         <div class="container">
-            <div class="row gx-4 align-items-center justify-content-between">
+            <div class="row">
+                    <div class="mt-5 mt-md-0 text-center">
+                        <h2 class="display-5 fw-bold" data-language="our_team"></h2>
+                        <p class="lead" data-language="our_team_description"></p>
+                    </div>                
+            </div>
+            <div class="row gx-4 align-items-center justify-content-between">      
                 <div class="col-md-5 order-1 order-md-2">
                     <div class="mt-5 mt-md-0">
-                        <span class="text-muted">Our Story</span>
-                        <h2 class="display-5 fw-bold">About Us</h2>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitation ullamco laboris .</p>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt.</p>
+                        <div class="container my-4">
+
+                            <div id="carouselExampleDark" class="carousel carousel-dark slide ">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                </div>
+                                <div class="carousel-inner carousel-team">
+                                    <div class="carousel-item active paloma" data-bs-interval="10000"><div style="min-height: 140px;">
+                                            <div class="carousel-caption d-block">
+                                                <h5>Paloma Linck</h5>
+                                                <p data-language="paloma_artist"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item franklyn">
+                                        <div style="min-height: 140px;">
+                                            <div class="carousel-caption d-block">
+                                                <h5>Franklyn</h5>
+                                                <p data-language="franklyn_description"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item douglas" data-bs-interval="2000">
+                                        <div style="min-height: 140px;">
+                                            <div class="carousel-caption d-block">
+                                                <h5>Douglas Graeff</h5>
+                                                <p data-language="douglas_description"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item gaia">
+                                        <div style="min-height: 140px;">
+                                            <div class="carousel-caption d-block">
+                                                <h5>Gaia</h5>
+                                                <p data-language="gaia_description"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>                           
+                              
+                            </div>
                     </div>
-                </div>
+                </div>   
                 <div class="col-md-6 order-2 order-md-1">
                     <div class="row gx-2 gx-lg-3">
                         <div class="col-6">
-                            <div class="mb-2"><img class="img-fluid rounded-3"
-                                    src="/img/paloma.jpg"></div>
+                            <div class="mb-2">
+                                <img class="img-fluid rounded-3 img-paloma img-equipe" src="/img/paloma.jpg">
+                                </div>
                         </div>
                         <div class="col-6">
-                            <div class="mb-2"><img class="img-fluid rounded-3"
+                            <div class="mb-2"><img class="img-fluid rounded-3 img-franklyn img-equipe"
                                     src="https://freefrontend.dev/assets/square.png"></div>
                         </div>
                         <div class="col-6">
-                            <div class="mb-2"><img class="img-fluid rounded-3"
-                                    src="https://freefrontend.dev/assets/square.png"></div>
+                            <div class="mb-2"><img class="img-fluid rounded-3 img-douglas img-equipe"
+                                    src="/img/douglas.jpeg"></div>
                         </div>
                         <div class="col-6">
-                            <div class="mb-2"><img class="img-fluid rounded-3"
+                            <div class="mb-2"><img class="img-fluid rounded-3 img-gaia img-equipe"
                                     src="https://freefrontend.dev/assets/square.png"></div>
                         </div>
                     </div>
