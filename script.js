@@ -44,14 +44,13 @@ function toggleLanguage(language) {
 }
 
 function setLocalization(language, allLanguagesElements){
-     allLanguagesElements.forEach(function(e, a){
-            if (!e || !localizationData[language] || !localizationData[language][e.dataset.language]) {
-                return;
-            }
+    allLanguagesElements.forEach(function(e, a){
+        if (!e || !localizationData[language] || !localizationData[language][e.dataset.language]) {
+            return;
+        }
 
-           e.innerText = localizationData[language][e.dataset.language];
-        });
-
+        e.innerText = localizationData[language][e.dataset.language];
+    });
 }
 
 btnPt.addEventListener('click', () => toggleLanguage('pt'));
@@ -59,16 +58,32 @@ btnEn.addEventListener('click', () => toggleLanguage('en'));
 
 fetchLocalization();
 
+var carrouselAboutMe = document.querySelector('#carouselExampleDark');
 
-document.querySelector('#carouselExampleDark').addEventListener('slide.bs.carousel', function (event) {
+if(carrouselAboutMe){
+    document.querySelector('#carouselExampleDark').addEventListener('slide.bs.carousel', function (event) {
    
-    const allImages = document.querySelectorAll('.img-paloma, .img-douglas, .img-franklyn, .img-gaia');
-    allImages.forEach(image => image.style.opacity = 0.3);
+        const allImages = document.querySelectorAll('.img-paloma, .img-douglas, .img-franklyn, .img-gaia');
+        allImages.forEach(image => image.style.opacity = 0.3);
 
-    
-    const activeSlide = event.relatedTarget;
-    const activeSlideIndex = Array.from(activeSlide.parentNode.children).indexOf(activeSlide);
-    const images = document.querySelectorAll('.img-paloma, .img-douglas, .img-franklyn, .img-gaia');
-    
-    images[activeSlideIndex].style.opacity = 1;
+        
+        const activeSlide = event.relatedTarget;
+        const activeSlideIndex = Array.from(activeSlide.parentNode.children).indexOf(activeSlide);
+        const images = document.querySelectorAll('.img-paloma, .img-douglas, .img-franklyn, .img-gaia');
+        
+        images[activeSlideIndex].style.opacity = 1;
+    });
+}
+
+
+document.querySelectorAll('.img-paloma, .img-douglas, .img-franklyn, .img-gaia').forEach((image, index) => {
+    image.addEventListener('click', () => {
+        
+        const carousel = document.querySelector('#carouselExampleDark');
+        const bootstrapCarousel = bootstrap.Carousel.getInstance(carousel) || new bootstrap.Carousel(carousel);
+        bootstrapCarousel.to(index);
+    });
 });
+
+
+
