@@ -335,7 +335,7 @@ svg {
   @media (min-width: 1140px) {
     .horizontal-timeline .items .items-list {
       display: inline-block;
-      width: 24%;
+      width: 15%;
       padding-top: 45px;
     }
   

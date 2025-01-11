@@ -12,7 +12,7 @@ function fetchLocalization() {
             toggleLanguage(currentLanguage);
         })
         .catch(error => {
-            // console.error('Erro ao carregar o arquivo JSON:', error);
+            
         });
 }
 
@@ -86,4 +86,32 @@ document.querySelectorAll('.img-paloma, .img-douglas, .img-franklyn, .img-gaia')
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const footer = document.getElementById("main-footer");
 
+    function adjustFooter() {
+        setTimeout(() => {
+            const bodyHeight = document.body.scrollHeight;
+            const viewportHeight = window.innerHeight;
+
+            if (bodyHeight > viewportHeight) {
+                footer.style.position = "relative";
+            } else {
+                footer.style.position = "absolute";
+                footer.style.bottom = "0";
+            }
+        }, 500);
+    }
+
+    const accordionButtons = document.querySelectorAll(".accordion-button");
+    accordionButtons.forEach(button => {
+        button.addEventListener("click", adjustFooter);
+    });
+
+    const events = ["resize", "fullscreenchange", "deviceorientation"];
+    events.forEach(event => {
+        window.addEventListener(event, adjustFooter);
+    });
+
+    adjustFooter();
+});

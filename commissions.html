@@ -8,16 +8,199 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="index-style.css" />
+
     <style>
-        body {
-            position: relative;
-            min-height: 100vh;
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+
+        body{            
+            background-color: rgba(245, 245, 245);
         }
 
-        .accordion-button:not(.collapsed) {
-            color: black;
-            background-color: rgb(241, 239, 225);
-            box-shadow: rgb(241, 239, 225);
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body .container.timeline {
+            --color: rgba(30, 30, 30);
+            --bgColor: rgba(245, 245, 245);
+            min-height: 100vh;
+            display: grid;
+            align-content: center;
+            gap: 2rem;
+            padding: 2rem;
+            font-family: "Poppins", sans-serif;
+            color: var(--color);
+            background: var(--bgColor);
+        }
+
+        .container.timeline h1 {
+            text-align: center;
+        }
+
+        .container.timeline ul {
+            --col-gap: 2rem;
+            --row-gap: 2rem;
+            --line-w: 0.25rem;
+            display: grid;
+            grid-template-columns: var(--line-w) 1fr;
+            grid-auto-columns: max-content;
+            column-gap: var(--col-gap);
+            list-style: none;
+            width: min(60rem, 90%);
+            margin-inline: auto;
+        }
+
+        .container.timeline ul::before {
+            content: "";
+            grid-column: 1;
+            grid-row: 1 / span 20;
+            background: rgb(225, 225, 225);
+            border-radius: calc(var(--line-w) / 2);
+        }
+
+        .container.timeline ul li:not(:last-child) {
+            margin-bottom: var(--row-gap);
+        }
+
+   
+        .container.timeline ul li {
+            grid-column: 2;
+            --inlineP: 1.5rem;
+            margin-inline: var(--inlineP);
+            grid-row: span 2;
+            display: grid;
+            grid-template-rows: min-content min-content min-content;
+        }
+
+
+        .container.timeline ul li .date {
+            --dateH: 3rem;
+            height: var(--dateH);
+            margin-inline: calc(var(--inlineP) * -1);
+
+            text-align: center;
+            background-color: var(--accent-color);
+
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 700;
+
+            display: grid;
+            place-content: center;
+            position: relative;
+
+            border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
+        }
+
+  
+        .container.timeline ul li .date::before {
+            content: "";
+            width: var(--inlineP);
+            aspect-ratio: 1;
+            background: var(--accent-color);
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
+            position: absolute;
+            top: 100%;
+
+            clip-path: polygon(0 0, 100% 0, 0 100%);
+            right: 0;
+        }
+
+   
+        .container.timeline ul li .date::after {
+            content: "";
+            position: absolute;
+            width: 2rem;
+            aspect-ratio: 1;
+            background: var(--bgColor);
+            border: 0.3rem solid var(--accent-color);
+            border-radius: 50%;
+            top: 50%;
+
+            transform: translate(50%, -50%);
+            right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+        }
+
+  
+        .container.timeline ul li .title,
+        .container.timeline ul li .descr {
+            background: var(--bgColor);
+            position: relative;
+            padding-inline: 1.5rem;
+        }
+
+        .container.timeline ul li .title {
+            overflow: hidden;
+            padding-block-start: 1.5rem;
+            padding-block-end: 1rem;
+            font-weight: 500;
+        }
+
+        .container.timeline ul li .descr {
+            padding-block-end: 1.5rem;
+            font-weight: 300;
+        }
+
+        .container.timeline ul li .title::before,
+        .container.timeline ul li .descr::before {
+            content: "";
+            position: absolute;
+            width: 90%;
+            height: 0.5rem;
+            background: rgba(0, 0, 0, 0.5);
+            left: 50%;
+            border-radius: 50%;
+            filter: blur(4px);
+            transform: translate(-50%, 50%);
+        }
+
+        .container.timeline ul li .title::before {
+            bottom: calc(100% + 0.125rem);
+        }
+
+        .container.timeline ul li .descr::before {
+            z-index: -1;
+            bottom: 0.25rem;
+        }
+
+        @media (min-width: 40rem) {
+            .container.timeline ul {
+                grid-template-columns: 1fr var(--line-w) 1fr;
+            }
+
+            .container.timeline ul::before {
+                grid-column: 2;
+            }
+
+            .container.timeline ul li:nth-child(odd) {
+                grid-column: 1;
+            }
+
+            .container.timeline ul li:nth-child(even) {
+                grid-column: 3;
+            }
+           
+            .container.timeline ul li:nth-child(2) {
+                grid-row: 2/4;
+            }
+
+            .container.timeline ul li:nth-child(odd) .date::before {
+                clip-path: polygon(0 0, 100% 0, 100% 100%);
+                left: 0;
+            }
+
+            .container.timeline ul li:nth-child(odd) .date::after {
+                transform: translate(-50%, -50%);
+                left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+            }
+
+            .container.timeline ul li:nth-child(odd) .date {
+                border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+            }
         }
     </style>
 </head>
@@ -32,7 +215,8 @@
         <div class="collapse navbar-collapse just" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link navigation-link" href="/index.html" data-language="home-page">commissions</a>
+                    <a class="nav-link navigation-link active" href="/index.html"
+                        data-language="home-page">commissions</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link navigation-link" href="/portfolio.html">Portfolio</a>
@@ -41,10 +225,12 @@
                     <a class="nav-link navigation-link" href="/about.html" data-language="about_me">about_me</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link navigation-link active" href="/commissions.html" data-language="commissions">commissions</a>
+                    <a class="nav-link navigation-link" href="/commissions.html"
+                        data-language="commissions">commissions</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="https://www.instagram.com/watercolor_animal/">Instagram</a>
+                    <a class="nav-link" target="_blank"
+                        href="https://www.instagram.com/watercolor_animal/">Instagram</a>
                 </li>
             </ul>
             <div style="text-align: center;margin-left: auto;">
@@ -54,160 +240,62 @@
                 </div>
             </div>
         </div>
-</nav>
+    </nav>
 
     <div class="container">
-        <div class="row">
-            <div class="container-fluid py-5">
-
-                <div class="row">
-                    <div class="col-lg-12">
-
-                        <div class="horizontal-timeline">
-
-                            <ul class="list-inline items">
-                                <li class="list-inline-item items-list">
-                                    <div class="px-4">
-                                        <div class="event-date badge bg-info">#1</div>
-                                        <h5 class="pt-2" data-language="step-1"></h5>
-                                        <p class="text-muted">It will be as simple as occidental in fact it will be
-                                            Occidental Cambridge
-                                            friend</p>
-                                    </div>
-                                </li>
-                                <li class="list-inline-item items-list">
-                                    <div class="px-4">
-                                        <div class="event-date badge bg-success">#2</div>
-                                        <h5 class="pt-2" data-language="step-2"></h5>
-                                        <p class="text-muted">Everyone realizes why a new common language one could
-                                            refuse translators.
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="list-inline-item items-list">
-                                    <div class="px-4">
-                                        <div class="event-date badge bg-danger">#3</div>
-                                        <h5 class="pt-2" data-language="step-3"></h5>
-                                        <p class="text-muted">If several languages coalesce the grammar of the resulting
-                                            simple and
-                                            regular</p>
-
-                                    </div>
-                                </li>
-                                <li class="list-inline-item items-list">
-                                    <div class="px-4">
-                                        <div class="event-date badge bg-warning">#4</div>
-                                        <h5 class="pt-2" data-language="step-4"></h5>
-                                        <p class="text-muted">Languages only differ in their pronunciation and their
-                                            most common words.
-                                        </p>
-
-                                    </div>
-                                </li>
-                                <!-- <li class="list-inline-item items-list">
-                                    <div class="px-4">
-                                        <div class="event-date badge bg-warning">#5</div>
-                                        <h5 class="pt-2" data-language="step-5">passo 5</h5>
-                                        <p class="text-muted">Languages only differ in their pronunciation and their
-                                            most common words.
-                                        </p>
-
-                                    </div>
-                                </li>
-                                <li class="list-inline-item items-list">
-                                    <div class="px-4">
-                                        <div class="event-date badge bg-warning">#6</div>
-                                        <h5 class="pt-2" data-language="step-6">passo 6</h5>
-                                        <p class="text-muted">Languages only differ in their pronunciation and their
-                                            most common words.
-                                        </p>
-                                    </div>
-                                </li> -->
-                            </ul>
-
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
+    </div>
+    <div class="container timeline">
+        <h1>Processo de encomenda</h1>
+        <p style="text-align: center;" data-language="commissions-intro"></p>
+        <ul>
+            <li style="--accent-color:#41516C">
+                <div class="date" data-language="step-1">2002</div>
+                <div class="title" data-language="step-1-title">Title 1</div>
+                <div class="descr" data-language="step-1-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam
+                    fugiat est numquam harum, accusamus suscipit consequatur laboriosam!</div>
+            </li>
+            <li style="--accent-color:#FBCA3E">
+                
+                <div class="date" data-language="step-2">2007</div>
+                <div class="title" data-language="step-2-title">Title 2</div>
+                <div class="descr" data-language="step-2-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos adipisci nobis nostrum
+                    vero nihil veniam.</div>
+            </li>
+            <li style="--accent-color:#E24A68">
+                <div class="date" data-language="step-3">2012</div>
+                <div class="title" data-language="step-3-title">Title 3</div>
+                <div class="descr" data-language="step-3-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga minima consequuntur
+                    soluta placeat iure totam commodi repellendus ea delectus, libero fugit quod reprehenderit, sequi
+                    quo, et dolorum saepe nulla hic.</div>
+            </li>
+            <li style="--accent-color:#1B5F8C">
+                <div class="date" data-language="step-4">2017</div>
+                <div class="title" data-language="step-4-title">Title 4</div>
+                <div class="descr" data-language="step-4-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, cumque.</div>
+            </li>
+            <li style="--accent-color:#4CADAD">
+                <div class="date" data-language="step-5">2022</div>
+                <div class="title" data-language="step-5-title">Title 5</div>
+                <div class="descr" data-language="step-5-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, non.</div>
+            </li>
+            <li style="--accent-color:#FF5733">
+                <div class="date" data-language="step-6">2025</div>
+                <div class="title" data-language="step-6-title">Title 6</div>
+                <div class="descr" data-language="step-6-description">Nova descrição para o sexto item.</div>
+            </li>
+        </ul>
     </div>
 
     <div class="container">
-        <div class="row">
-            <div class="accordion" id="accordionPanelsStayOpenExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapseTwo">
-                            Accordion Item #1
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
-                        aria-labelledby="panelsStayOpen-headingOne">
-                        <div class="accordion-body">
-                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the
-                            collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes control the overall appearance, as well as the showing and hiding via CSS
-                            transitions. You can modify any of this with custom CSS or overriding our default variables.
-                            It's also worth noting that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapseTwo">
-                            Accordion Item #2
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show"
-                        aria-labelledby="panelsStayOpen-headingTwo">
-                        <div class="accordion-body">
-                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until
-                            the collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes control the overall appearance, as well as the showing and hiding via CSS
-                            transitions. You can modify any of this with custom CSS or overriding our default variables.
-                            It's also worth noting that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapseThree">
-                            Accordion Item #3
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show"
-                        aria-labelledby="panelsStayOpen-headingThree">
-                        <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                            collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes control the overall appearance, as well as the showing and hiding via CSS
-                            transitions. You can modify any of this with custom CSS or overriding our default variables.
-                            It's also worth noting that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <p style="padding: 0 18%; text-align: center; "data-language="commission-more-questions"></p>
     </div>
 
-    
     <footer id="main-footer" style="
     height: 50px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;">
+    position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;">
         @watercolorbypaloma
     </footer>
 
@@ -219,6 +307,7 @@
         crossorigin="anonymous"></script>
 
     <script src="/script.js"></script>
+
 </body>
 
 </html>
