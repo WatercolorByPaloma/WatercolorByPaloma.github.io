@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WATERCOLOR BY PALOMA</title>
+    <title>Paloma Linck |  Watercolor</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="index-style.css" />
+    <link rel="stylesheet" href="style.css" />
 
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 
-        body{            
+        body {
             background-color: rgba(245, 245, 245);
         }
 
@@ -66,7 +66,7 @@
             margin-bottom: var(--row-gap);
         }
 
-   
+
         .container.timeline ul li {
             grid-column: 2;
             --inlineP: 1.5rem;
@@ -96,7 +96,7 @@
             border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
         }
 
-  
+
         .container.timeline ul li .date::before {
             content: "";
             width: var(--inlineP);
@@ -110,7 +110,7 @@
             right: 0;
         }
 
-   
+
         .container.timeline ul li .date::after {
             content: "";
             position: absolute;
@@ -125,7 +125,7 @@
             right: calc(100% + var(--col-gap) + var(--line-w) / 2);
         }
 
-  
+
         .container.timeline ul li .title,
         .container.timeline ul li .descr {
             background: var(--bgColor);
@@ -183,7 +183,7 @@
             .container.timeline ul li:nth-child(even) {
                 grid-column: 3;
             }
-           
+
             .container.timeline ul li:nth-child(2) {
                 grid-row: 2/4;
             }
@@ -202,12 +202,22 @@
                 border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
             }
         }
+
+        .alert {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1050;
+            max-width: 90%;
+            word-wrap: break-word;
+        }
     </style>
 </head>
 
 <body>
+
     <nav class="container navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/index.html">WATERCOLOR BY PALOMA</a>
+        <a class="navbar-brand" href="/index.html">Paloma Linck |  Watercolor</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -215,8 +225,7 @@
         <div class="collapse navbar-collapse just" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link navigation-link active" href="/index.html"
-                        data-language="home-page">commissions</a>
+                    <a class="nav-link navigation-link" href="/index.html" data-language="home-page">commissions</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link navigation-link" href="/portfolio.html">Portfolio</a>
@@ -224,9 +233,12 @@
                 <li class="nav-item">
                     <a class="nav-link navigation-link" href="/about.html" data-language="about_me">about_me</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link navigation-link" href="/commissions.html"
+                <li class="nav-item active">
+                    <a class="nav-link navigation-link active" href="/commissions.html"
                         data-language="commissions">commissions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navigation-link " href="/photo-tips.html" data-language="tips"></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" target="_blank"
@@ -242,61 +254,89 @@
         </div>
     </nav>
 
-    <div class="container">
-    </div>
-    <div class="container timeline">
-        <h1>Processo de encomenda</h1>
-        <p style="text-align: center;" data-language="commissions-intro"></p>
-        <ul>
-            <li style="--accent-color:#41516C">
-                <div class="date" data-language="step-1">2002</div>
-                <div class="title" data-language="step-1-title">Title 1</div>
-                <div class="descr" data-language="step-1-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam
-                    fugiat est numquam harum, accusamus suscipit consequatur laboriosam!</div>
-            </li>
-            <li style="--accent-color:#FBCA3E">
-                
-                <div class="date" data-language="step-2">2007</div>
-                <div class="title" data-language="step-2-title">Title 2</div>
-                <div class="descr" data-language="step-2-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos adipisci nobis nostrum
-                    vero nihil veniam.</div>
-            </li>
-            <li style="--accent-color:#E24A68">
-                <div class="date" data-language="step-3">2012</div>
-                <div class="title" data-language="step-3-title">Title 3</div>
-                <div class="descr" data-language="step-3-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga minima consequuntur
-                    soluta placeat iure totam commodi repellendus ea delectus, libero fugit quod reprehenderit, sequi
-                    quo, et dolorum saepe nulla hic.</div>
-            </li>
-            <li style="--accent-color:#1B5F8C">
-                <div class="date" data-language="step-4">2017</div>
-                <div class="title" data-language="step-4-title">Title 4</div>
-                <div class="descr" data-language="step-4-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, cumque.</div>
-            </li>
-            <li style="--accent-color:#4CADAD">
-                <div class="date" data-language="step-5">2022</div>
-                <div class="title" data-language="step-5-title">Title 5</div>
-                <div class="descr" data-language="step-5-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, non.</div>
-            </li>
-            <li style="--accent-color:#FF5733">
-                <div class="date" data-language="step-6">2025</div>
-                <div class="title" data-language="step-6-title">Title 6</div>
-                <div class="descr" data-language="step-6-description">Nova descrição para o sexto item.</div>
-            </li>
-        </ul>
-    </div>
+    <div id="site-content">
+        <div class="container text-center mt-5">
+            <div class="row">
+                <div class="col-12 col-md-4 mb-3 copy-email">
+                    <p class="btn btn-primary w-100" onclick="copyEmail(this)" data-language="copy_email"></p>
+                </div>
+                <div class="col-12 col-md-4 mb-3 open-instagram">
+                    <a class="nav-link" target="_blank"
+                        href="https://www.instagram.com/watercolor_animal/">Instagram</a>
+                </div>
+                <div class="col-12 col-md-4 mb-3">
+                    <a href="mailto:watercoloranimal.bypl@gmail.com" class="btn btn-secondary w-100"
+                        data-language="open_email">Abrir Email</a>
+                </div>
+                <div class="col-12 col-md-4 mb-3">
+                    <a href="https://ig.me/m/watercolor_animal" target="_blank" class="btn btn-info w-100"
+                        data-language="send_instagram_message"></a>
+                </div>
+            </div>
+        </div>
 
-    <div class="container">
-        <p style="padding: 0 18%; text-align: center; "data-language="commission-more-questions"></p>
-    </div>
+        <div class="container timeline">
+            <h1>Processo de encomenda</h1>
+            <p style="text-align: center;" data-language="commissions-intro"></p>
+            <ul>
+                <li style="--accent-color:#41516C">
+                    <div class="date" data-language="step-1"></div>
+                    <div class="title" data-language="step-1-title"></div>
+                    <div class="descr" data-language="step-1-description"></div>
+                    <div class="">
+                        <a href="/photo-tips.html" data-language="clickToSeeTips"></a>
+                    </div>
+                </li>
+                <li style="--accent-color:#FBCA3E">
 
-    <footer id="main-footer" style="
-    height: 50px;
-    position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;">
-        @watercolorbypaloma
+                    <div class="date" data-language="step-2"></div>
+                    <div class="title" data-language="step-2-title"></div>
+                    <div class="descr" data-language="step-2-description"></div>
+                </li>
+                <li style="--accent-color:#E24A68">
+                    <div class="date" data-language="step-3"></div>
+                    <div class="title" data-language="step-3-title"></div>
+                    <div class="descr" data-language="step-3-description"></div>
+                </li>
+                <li style="--accent-color:#1B5F8C">
+                    <div class="date" data-language="step-4"></div>
+                    <div class="title" data-language="step-4-title"></div>
+                    <div class="descr" data-language="step-4-description"></div>
+                </li>
+                <li style="--accent-color:#4CADAD">
+                    <div class="date" data-language="step-5"></div>
+                    <div class="title" data-language="step-5-title"></div>
+                    <div class="descr" data-language="step-5-description"></div>
+                </li>
+                <li style="--accent-color:#FF5733">
+                    <div class="date" data-language="step-6"></div>
+                    <div class="title" data-language="step-6-title"></div>
+                    <div class="descr" data-language="step-6-description"></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <p style="padding: 0 18%; text-align: center; " data-language="commission-more-questions"></p>
+        </div>
+
+        <a href="https://ig.me/m/watercolor_animal" class="float-icon no-text" data-language="send_instagram_message">
+            <img class="icon-send" src="/img/send.png" alt="">
+        </a>
+    </div>
+    <footer class="bg-dark text-light py-4 mt-4">
+        <div class="container text-center">
+            <h5 data-language="stay_connected"></h5>
+            <p data-language="follow_or_send_message"></p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="https://www.instagram.com/watercolor_animal/" target="_blank" class="btn btn-outline-light">
+                    <i class="bi bi-instagram"></i> Instagram
+                </a>
+                <a href="mailto:watercoloranimal.bypl@gmail.com" class="btn btn-outline-light">
+                    <i class="bi bi-envelope"></i> Email
+                </a>
+            </div>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

@@ -4,15 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WATERCOLOR BY PALOMA</title>
+    <title>Paloma Linck | Watercolor</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="index-style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+    </style>
+
 </head>
 
 <body>
-    <nav class="container navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="/index.html">WATERCOLOR BY PALOMA</a>
+    <div class="nav-holder">
+        <nav class="container navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="/index.html">Paloma Linck | Watercolor</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -20,7 +25,8 @@
             <div class="collapse navbar-collapse just" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link navigation-link active" href="/index.html" data-language="home-page">commissions</a>
+                        <a class="nav-link navigation-link active" href="/index.html"
+                            data-language="home-page">commissions</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link navigation-link" href="/portfolio.html">Portfolio</a>
@@ -29,87 +35,128 @@
                         <a class="nav-link navigation-link" href="/about.html" data-language="about_me">about_me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navigation-link" href="/commissions.html" data-language="commissions">commissions</a>
+                        <a class="nav-link navigation-link" href="/commissions.html"
+                            data-language="commissions">commissions</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" target="_blank" href="https://www.instagram.com/watercolor_animal/">Instagram</a>
+                        <a class="nav-link" target="_blank"
+                            href="https://www.instagram.com/watercolor_animal/">Instagram</a>
                     </li>
                 </ul>
-                <div style="text-align: center;margin-left: auto;">
-                    <div class="btn-group" role="group" aria-label="Language switch">
-                        <button type="button" class="btn btn-primary" id="btn-pt">PT</button>
-                        <button type="button" class="btn btn-secondary" id="btn-en">EN</button>
-                    </div>
-                </div>
             </div>
-    </nav>
-
-    <div class="container-hero-section">
-        <div class="hero-section">
-            <div class="container">
-                <h1 class="display-4" data-translate-key="header" data-language="animal_masterpiece">YOUR ANIMAL IN A WATERCOLOR MASTERPIECE</h1>
+        </nav>
+        <div style="text-align: center;margin-right: 10px;  ">
+            <div class="dropdown">
+                <select class="form-select" aria-label="Language switch" style="padding-left: 40px; background-image: url('img/pt-flag.png'); 
+                               background-repeat: no-repeat; background-position: left 10px center; 
+                               background-size: 20px;">
+                    <option value="pt" id="btn-pt" data-flag="img/pt-flag.png">Português</option>
+                    <option value="en" id="btn-en" data-flag="img/en-flag.png">English</option>
+                </select>
             </div>
         </div>
     </div>
 
-    <div id="wave-top">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#f1efe1" fill-opacity="1"
-                d="M0,64L60,74.7C120,85,240,107,360,106.7C480,107,600,85,720,106.7C840,128,960,192,1080,202.7C1200,213,1320,171,1380,149.3L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
-            </path>
-        </svg>
-    </div>
-    <div class="p-5 my-services">
-        <h2 class="text-center mb-5" style="font-size: 5rem;" data-language="my_services">MY SERVICES</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card service-card h-100" >
-                    <img src="img/petportrait.jpg" alt="Pet Portraits">
-                    <div class="card-body" style="display: flex;flex-direction: column;justify-content: space-between;">
-                        <h5 class="card-title" data-language="personalized_portraits_your_pet">personalized_portraits_your_pet</h5>
-                        <p class="card-text" data-language="personalized_portraits_your_pet_description">personalized_portraits_your_pet_description</p>
-                        <a href="#" class="btn btn-primary" data-language="order_find_out_more">Encomendar ou saber mais</a>
+    <div class="container-hero-section hero-section"></div>
+    <h1 class="display-4" data-translate-key="header" data-language="animal_masterpiece"></h1>
+
+    <section class="aquarela-services">
+        <div class="container py-5">
+            <div class="service-card card-horizontal mb-5 shadow-lg">
+                <div class="row g-0">
+                    <div class="col-md-3">
+                        <img src="img/petportrait.jpg" class="img-fluid" alt="Retrato de Pet">
+                    </div>
+                    <div class="col-md-9 card-content">
+                        <div class="card-body p-4 p-lg-5">
+                            <h3 class="card-title mb-4">
+                                <span data-language="personalized_portraits_your_pet"></span>
+                            </h3>
+                            <p class="card-text mb-4" data-language="personalized_portraits_your_pet_description"></p>
+                            <a href="commissions.html" class="btn btn-aquarela" data-language="order_find_out_more"></a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card service-card h-100">
-                    <img src="img/wildlifeportrait.jpg" alt="Commercial Portraits">
-                    <div class="card-body" style="display: flex;flex-direction: column;justify-content: space-between;">
-                        <h5 class="card-title" data-language="personalized_portraits_wildlife">personalized_portraits_wildlife</h5>
-                        <p class="card-text" data-language="personalized_portraits_wildlife_description">personalized_portraits_wildlife_description</p>
-                        <a href="#" class="btn btn-primary" data-language="order_find_out_more">Encomendar ou saber mais</a>
+            <div class="service-card card-horizontal mb-5 shadow-lg">
+                <div class="row g-0">
+                    <div class="col-md-3 order-md-2">
+                        <img src="img/wildlifeportrait.jpg" class="img-fluid" alt="Vida Selvagem">
                     </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card service-card h-100">
-                    <img src="img/comming-soon.jpg" alt="Learn to Draw">
-                    <div class="card-body">
-                        <h5 class="card-title" data-language="news_comming_soon">news_comming_soon</h5>
-                        <p class="card-text" data-language="news_comming_soon_description">news_comming_soon</p>
+                    <div class="col-md-9 card-content order-md-1">
+                        <div class="card-body p-4 p-lg-5">
+                            <h3 class="card-title mb-4">
+                                <i class="fas fa-feather me-3"></i>
+                                <span data-language="personalized_portraits_wildlife"></span>
+                            </h3>
+                            <p class="card-text mb-4" data-language="personalized_portraits_wildlife_description"></p>
+                            <a href="commissions.html" class="btn btn-aquarela" data-language="order_find_out_more"></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="wave-container"></div>
 
-    <div class="container-fluid py-5 all-animals" style="overflow: hidden;"></div>
+        <div class="divider-bottom">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path fill="#f8f9fa" d="M0,0 C20,40 50,30 100,0 L100,100 L0,100 Z" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- <div class="container-fluid py-5 all-animals" style="overflow: hidden;"></div>
 
     <div class="container-fluid text-center">
-        <a href="/portfolio.html" class="btn-secondary ms-3 btn-enquire-portfolio" data-language="check_portfolio_enquire">Check my portfolio and know
+        <a href="/portfolio.html" class="btn-secondary ms-3 btn-enquire-portfolio"
+            data-language="check_portfolio_enquire">Check my portfolio and know
             how to enquire</a>
+    </div> -->
+
+    <div class="container-holder">
+        <div class="container-all">
+            <input type="radio" name="slider" id="item-1" checked>
+            <input type="radio" name="slider" id="item-2">
+            <input type="radio" name="slider" id="item-3">
+            <div class="cards">
+                <label class="card" for="item-1" id="song-1">
+                    <img src="img/portfolio/el_maestro.JPG" alt="song">
+                </label>
+                <label class="card" for="item-2" id="song-2">
+                    <img src="img/paloma.jpg" alt="song">
+                </label>
+                <label class="card" for="item-3" id="song-3">
+                    <img src="img/petportrait.jpg" alt="song">
+                </label>
+            </div>
+            <div class="player">
+                <div class="upper-part">
+                    <div class="info-area" id="test">
+                        <label class="song-info" id="song-info-1">
+                            <a href="portfolio.html" data-language="all-portfolio"></a>
+                        </label>
+                        <label class="song-info" id="song-info-2">
+                            <a href="portfolio.html" data-language="about_me"></a>
+                        </label>
+                        <label class="song-info" id="song-info-3">
+                            <a href="portfolio.html" data-language="commissions"></a>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="margin-top: 10%">
-        <h2 class="text-center fs-1" style="margin: 50px 0;" data-language="what_client_say">WHAT MY COMMISSION CLIENTS SAY</h2>
+        <h2 class="text-center fs-1" style="margin: 50px 0;" data-language="what_client_say">WHAT MY COMMISSION CLIENTS
+            SAY</h2>
         <div class="carousel-inner">
 
             <div class="carousel-item active">
                 <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
                     <div class="text-center">
-                        <p class="mb-1 fs-1 comment" data-language="3maria_comment"></p>
+                        <div class="speech-bubble">
+                            <p class="mb-1 fs-1 comment" data-language="3maria_comment"></p>
+                        </div>
                         <p class="text-muted">— Raquel (@3mariasnadescoberta)</p>
                     </div>
                 </div>
@@ -118,7 +165,9 @@
             <div class="carousel-item">
                 <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
                     <div class="text-center">
-                        <p class="mb-1 fs-1 comment" data-language="jessica_dias_comment"></p>
+                        <div class="speech-bubble">
+                            <p class="mb-1 fs-1 comment" data-language="jessica_dias_comment"></p>
+                        </div>
                         <p class="text-muted">— Jéssica Dias (@jessapdias)</p>
                     </div>
                 </div>
@@ -127,7 +176,9 @@
             <div class="carousel-item">
                 <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
                     <div class="text-center">
-                        <p class="mb-1 fs-1 comment" data-language="filo_duarte_comment"></p>
+                        <div class="speech-bubble">
+                            <p class="mb-1 fs-1 comment" data-language="filo_duarte_comment"></p>
+                        </div>
                         <p class="text-muted">— Filomena Duarte (@filoduarte)</p>
                     </div>
                 </div>
@@ -136,7 +187,9 @@
             <div class="carousel-item">
                 <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
                     <div class="text-center">
-                        <p class="mb-1 fs-1 comment" data-language="filo_duarte_comment2"></p>
+                        <div class="speech-bubble">
+                            <p class="mb-1 fs-1 comment" data-language="filo_duarte_comment2"></p>
+                        </div>
                         <p class="text-muted">— Filomena Duarte (@filoduarte)</p>
                     </div>
                 </div>
@@ -145,7 +198,9 @@
             <div class="carousel-item">
                 <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
                     <div class="text-center">
-                        <p class="mb-1 fs-1 comment" data-language="maria_joao_comment"></p>
+                        <div class="speech-bubble">
+                            <p class="mb-1 fs-1 comment" data-language="maria_joao_comment"></p>
+                        </div>
                         <p class="text-muted">— Maria João Luz - (@mariajoaoluzz)</p>
                     </div>
                 </div>
@@ -154,7 +209,9 @@
             <div class="carousel-item">
                 <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
                     <div class="text-center">
-                        <p class="mb-1 fs-1 comment" data-language="maria_batista_comment"></p>
+                        <div class="speech-bubble">
+                            <p class="mb-1 fs-1 comment" data-language="maria_batista_comment"></p>
+                        </div>
                         <p class="text-muted">— Maria João Batista - (@maria_joao_batista)</p>
                     </div>
                 </div>
@@ -163,7 +220,9 @@
             <div class="carousel-item">
                 <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
                     <div class="text-center">
-                        <p class="mb-1 fs-1 comment" data-language="kesia_comment"></p>
+                        <div class="speech-bubble">
+                            <p class="mb-1 fs-1 comment" data-language="kesia_comment"></p>
+                        </div>
                         <p class="text-muted">— Kesia - (@kesia.cuarelas)</p>
                     </div>
                 </div>
@@ -172,70 +231,86 @@
             <div class="carousel-item">
                 <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
                     <div class="text-center">
-                        <p class="mb-1 fs-1 comment" data-language="ana_comment"></p>
+                        <div class="speech-bubble">
+                            <p class="mb-1 fs-1 comment" data-language="ana_comment"></p>
+                        </div>
                         <p class="text-muted">— Ana Figueiredo - (@anambfigueiredo)</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="carousel-item">
                 <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
                     <div class="text-center">
-                        <p class="mb-1 fs-1 comment" data-language="patricia_comment"></p>
+                        <div class="speech-bubble">
+                            <p class="mb-1 fs-1 comment" data-language="patricia_comment"></p>
+                        </div>
                         <p class="text-muted">— Patrícia Silva - (@sofia.vicente300)</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="carousel-item">
                 <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
                     <div class="text-center">
-                        <p class="mb-1 fs-1 comment" data-language="salvador_comment"></p>
+                        <div class="speech-bubble">
+                            <p class="mb-1 fs-1 comment" data-language="salvador_comment"></p>
+                        </div>
                         <p class="text-muted">— Salvador da Silva - (@salvatoretheseeker)</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="carousel-item">
                 <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
                     <div class="text-center">
-                        <p class="mb-1 fs-1 comment" data-language="joana_comment"></p>
+                        <div class="speech-bubble">
+                            <p class="mb-1 fs-1 comment" data-language="joana_comment"></p>
+                        </div>
                         <p class="text-muted">— Joana Monteiro - (@joana_martinho_monteiro)</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="carousel-item">
                 <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
                     <div class="text-center">
-                        <p class="mb-1 fs-1 comment" data-language="cristovao_comment"></p>
+                        <div class="speech-bubble">
+                            <p class="mb-1 fs-1 comment" data-language="cristovao_comment"></p>
+                        </div>
                         <p class="text-muted">— Cristóvão Belperin - (@cristovao.lb)</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="carousel-item">
                 <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
                     <div class="text-center">
-                        <p class="mb-1 fs-1 comment" data-language="eunice_comment"></p>
+                        <div class="speech-bubble">
+                            <p class="mb-1 fs-1 comment" data-language="eunice_comment"></p>
+                        </div>
                         <p class="text-muted">— Eunice Fonseca - (@eunicejesusfonseca)</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="carousel-item">
                 <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
                     <div class="text-center">
-                        <p class="mb-1 fs-1 comment" data-language="fernanco_comment"></p>
+                        <div class="speech-bubble">
+                            <p class="mb-1 fs-1 comment" data-language="fernanco_comment"></p>
+                        </div>
                         <p class="text-muted">— Fernando Gonçalves - (@fdgoncal)</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="carousel-item">
                 <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
                     <div class="text-center">
-                        <p class="mb-1 fs-1 comment" data-language="alexandra_comment"></p>
+                        <div class="speech-bubble">
+                            <p class="mb-1 fs-1 comment" data-language="alexandra_comment"></p>
+                        </div>
                         <p class="text-muted">— Alexandra Lopes - (@shanalopes21)</p>
                     </div>
                 </div>
@@ -334,8 +409,20 @@
             </div>
         </div>
     </div>
-    <footer id="main-footer">
-        @watercolorbypaloma
+
+    <footer class="bg-dark text-light py-4 mt-4">
+        <div class="container text-center">
+            <h5 data-language="stay_connected"></h5>
+            <p data-language="follow_or_send_message"></p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="https://www.instagram.com/watercolor_animal/" target="_blank" class="btn btn-outline-light">
+                    <i class="bi bi-instagram"></i> Instagram
+                </a>
+                <a href="mailto:watercoloranimal.bypl@gmail.com" class="btn btn-outline-light">
+                    <i class="bi bi-envelope"></i> Email
+                </a>
+            </div>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -345,7 +432,7 @@
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
 
-        <script src="/script.js"></script>
+    <script src="/script.js"></script>
 
 </body>
 
