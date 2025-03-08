@@ -93,7 +93,8 @@
     "copy_email" : "Copy email",
     "send_instagram_message" : "Send a messagem on instagram",
     "stay_connected" : "Stay Connected",
-    "follow_or_send_message": "Follow us on Instagram or send us an email!"
+    "follow_or_send_message": "Follow us on Instagram or send us an email!",
+    "check_instagram_portfolio" : "While this portfolio showcases some of my watercolor portraits, you’ll find even more on my Instagram! There, you can explore behind-the-scenes videos, close-up details, and my latest works. Follow along for updates, process insights, and new creations. Check it out and stay inspired!"
   },
   "pt": {
     "enquire_by_email": "Encomende por email",
@@ -189,6 +190,7 @@
     "copy_email" : "Copiar email",
     "send_instagram_message" : "Mandar mensagem no instragram",
     "stay_connected": "Fique Conectado",
-    "follow_or_send_message": "Siga-nos no Instagram ou envie-nos um e-mail!"
+    "follow_or_send_message": "Siga-nos no Instagram ou envie-nos um e-mail!",
+    "check_instagram_portfolio" : "Embora este portfólio apresente algumas das minhas pinturas em aquarela, você encontrará muito mais no meu Instagram! Lá, compartilho vídeos dos bastidores, detalhes de perto e minhas criações mais recentes. Siga para acompanhar atualizações, processos e novas obras. Confira e inspire-se!"
   }
 }

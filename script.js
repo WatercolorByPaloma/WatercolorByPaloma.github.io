@@ -4,19 +4,21 @@ const btnEn = document.getElementById('btn-en');
 let localizationData;
 let currentLanguage = 'pt';
 
-function fetchLocalization() {
-    fetch('localizations.json')
-        .then(response => response.json())
-        .then(data => {
-            localizationData = data;
-            toggleLanguage(currentLanguage);
-        })
-        .catch(error => {});
+async function fetchLocalization() {
+    if (localizationData && Object.keys(localizationData).length > 0) {
+        return;
+    }
+
+    try {
+        const response = await fetch('localizations.json');
+        localizationData = await response.json();
+    } catch (error) {
+        console.error("Erro ao carregar localizações:", error);
+    }
 }
 
-
 function toggleLanguage(language) {
-    
+
     let allLanguagesElements = document.querySelectorAll('[data-language]');
     let links = document.querySelectorAll('a[href$=".html"], a[href*=".html?"]');
 
@@ -47,21 +49,31 @@ function toggleLanguage(language) {
     });
 }
 
-document.addEventListener('DOMContentLoaded', applyLanguageFromQueryParams);
 
 function applyLanguageFromQueryParams() {
     let params = new URLSearchParams(window.location.search);
     let lang = params.get('lang');
+    const select = document.querySelector(".form-select");
 
-    if (lang === 'pt') {
-        toggleLanguage('pt');
-    } else if (lang === 'en') {
+    if (lang === 'en') {
         toggleLanguage('en');
+        select.value = "en";
+    } else {
+        toggleLanguage('pt');
+        select.value = "pt";
     }
+
+    updateFlag(select); 
 }
 
-function setLocalization(language, allLanguagesElements) {
+async function setLocalization(language, allLanguagesElements) {
+
+    if (!localizationData || Object.keys(localizationData).length === 0) {
+        await fetchLocalization();
+    }
+
     allLanguagesElements.forEach(function (e, a) {
+
         if (!e || !localizationData[language] || !localizationData[language][e.dataset.language]) {
             return;
         }
@@ -74,17 +86,8 @@ function setLocalization(language, allLanguagesElements) {
 
         e.innerText = text;
     });
+
 }
-
-document.querySelector('.form-select').addEventListener('change', function() {
-    const selectedOption = this.options[this.selectedIndex];
-    const selectedFlag = selectedOption.dataset.flag;
-    this.style.backgroundImage = `url('${selectedFlag}')`;
-    
-    toggleLanguage(this.value);
-});
-
-fetchLocalization();
 
 var carrouselAboutMe = document.querySelector('#carouselExampleDark');
 
@@ -153,7 +156,16 @@ function isMobile() {
 })();
 
 
-document.querySelector('.form-select').addEventListener('change', function() {
-    const selectedFlag = this.options[this.selectedIndex].dataset.flag;
-    this.style.backgroundImage = `url('${selectedFlag}')`;
+document.querySelector('.form-select').addEventListener('change', function () {
+    
+    updateFlag(this); 
+    toggleLanguage(this.value);
 });
+
+function updateFlag(selectElement) {
+    const selectedOption = selectElement.options[selectElement.selectedIndex];
+    const selectedFlag = selectedOption.dataset.flag;
+    selectElement.style.backgroundImage = `url('${selectedFlag}')`;
+}
+
+document.addEventListener('DOMContentLoaded', applyLanguageFromQueryParams);
