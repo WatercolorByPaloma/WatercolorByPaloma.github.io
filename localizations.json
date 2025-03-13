@@ -13,8 +13,8 @@
     "news_comming_soon_description" : "We are excited to announce that you will soon be able to purchase an exclusive collection of products featuring the beautiful watercolors of our talented artist! Each piece has been carefully created and printed with her vibrant works, bringing a touch of art to your everyday life. From decorative items to unique accessories, we have a variety of products that will delight art lovers. Stay tuned! We'll be revealing more details and launch dates soon. Don't miss the chance to take a little piece of this magic home! 🌟 Follow us on social media and be among the first to discover this news! 🌟",
     "about_me" :"About me",
     "commissions" : "Commissions",
-    "all-portfolio" : "Portfólio",
-    "photo-vs-image" : "Photo vs Image",
+    "all-portfolio" : "Portfolio",
+    "photo-vs-image" : "Photo vs Portrait",
     "home-page" : "Home",
     "step-1": "Step 1",
     "step-2" : "Step 2", 
@@ -57,7 +57,7 @@
     "my_art" : "My art",
     "my_art_description" : "Watercolor allows me to capture the essence of animals, both wild and pets, with fluidity and precision. The transparency and softness of this technique are perfect for highlighting the nuances of color and texture found in the animal world, creating unique and vibrant portraits. Each animal I portray carries a story, a unique presence that I strive to translate into subtle details and genuine expressions. My goal is for each piece to deeply resonate with those who view it, aiming to immortalize the striking presence of every animal, whether it’s a wild creature or a beloved companion.", 
     "continuous_learning_improvement" : "Continuous learning and improvement",
-    "continuous_learning_improvement_description_en": "My watercolor learning journey has been largely self-taught. Through study and experimentation, I have been refining my skills to achieve a level of fluidity and realism that allows me to accurately capture the essence of animals. With each new piece, I strive to surpass my own limits, experimenting with techniques that bring greater depth, texture, and life to my paintings.",
+    "continuous_learning_improvement_description": "My watercolor learning journey has been largely self-taught. Through study and experimentation, I have been refining my skills to achieve a level of fluidity and realism that allows me to accurately capture the essence of animals. With each new piece, I strive to surpass my own limits, experimenting with techniques that bring greater depth, texture, and life to my paintings.",
     "our_team" : "Our team",
     "our_team_description": "Creating watercolor portraits is a journey that involves dedication and collaboration. Currently, our team consists of four members, each playing an essential role in making this work possible.",
     "paloma_artist": "I am the artist behind the portraits and responsible for the entire creative process. From the first contact with the client, I handle all the artistic work and take each step of the order until the final delivery.",
@@ -94,7 +94,8 @@
     "send_instagram_message" : "Send a messagem on instagram",
     "stay_connected" : "Stay Connected",
     "follow_or_send_message": "Follow us on Instagram or send us an email!",
-    "check_instagram_portfolio" : "While this portfolio showcases some of my watercolor portraits, you’ll find even more on my Instagram! There, you can explore behind-the-scenes videos, close-up details, and my latest works. Follow along for updates, process insights, and new creations. Check it out and stay inspired!"
+    "check_instagram_portfolio" : "While this portfolio showcases some of my watercolor portraits, you’ll find even more on my Instagram! There, you can explore behind-the-scenes videos, close-up details, and my latest works. Follow along for updates, process insights, and new creations. Check it out and stay inspired!",
+    "ordering_process" : "Ordering process"
   },
   "pt": {
     "enquire_by_email": "Encomende por email",
@@ -110,8 +111,8 @@
     "news_comming_soon_description" : "Estamos animados em anunciar que em breve você poderá adquirir uma coleção exclusiva de produtos com as belíssimas aquarelas da nossa talentosa artista! Cada peça foi cuidadosamente criada e estampada com as suas obras vibrantes, trazendo um toque de arte para o seu dia a dia. De itens de decoração a acessórios únicos, temos uma variedade de produtos que vão encantar os amantes da arte. Fique ligado! Em breve, revelaremos mais detalhes e datas de lançamento. Não perca a chance de levar um pedacinho dessa magia para casa! 🌟 Acompanhe nossas redes sociais e esteja entre os primeiros a descobrir essas novidades! 🌟",
     "about_me" : "Sobre mim",
     "commissions" : "Encomendas" ,
-    "all-portfolio" : "Portfolio",
-    "photo-vs-image" : "Foto vs Imagem",
+    "all-portfolio" : "Portfólio",
+    "photo-vs-image" : "Foto vs Retrato",
     "home-page" : "Início",
     "step-1" : "Passo 1",
     "step-2" : "Passo 2", 
@@ -191,6 +192,7 @@
     "send_instagram_message" : "Mandar mensagem no instragram",
     "stay_connected": "Fique Conectado",
     "follow_or_send_message": "Siga-nos no Instagram ou envie-nos um e-mail!",
-    "check_instagram_portfolio" : "Embora este portfólio apresente algumas das minhas pinturas em aquarela, você encontrará muito mais no meu Instagram! Lá, compartilho vídeos dos bastidores, detalhes de perto e minhas criações mais recentes. Siga para acompanhar atualizações, processos e novas obras. Confira e inspire-se!"
+    "check_instagram_portfolio" : "Embora este portfólio apresente algumas das minhas pinturas em aquarela, você encontrará muito mais no meu Instagram! Lá, compartilho vídeos dos bastidores, detalhes de perto e minhas criações mais recentes. Siga para acompanhar atualizações, processos e novas obras. Confira e inspire-se!",
+    "ordering_process" : "Ordering process"
   }
 }
